@@ -46,6 +46,7 @@ describe('Payment Controller', () => {
   });
 
   it('deletes a payment', async () => {
+    //modified
    await paymentController.delete({params: {id: 1}}, {});
    expect(Payment.destroy).toHaveBeenCalledWith({where: {id: 1}}); 
   });
